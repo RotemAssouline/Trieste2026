@@ -683,7 +683,7 @@
     <h3 style="color: rgb(24, 100, 171); font-size: 1em" data-id="ricot">Ricci curvature and optimal transport</h3>
     <div style="text-align: left; font-size: .9em;">
     <p><span class="citation" style="font-size:.8em">McCann '97, Cordero-Eruasquin-McCann-Schmuckenschläger '01, von Renesse-Sturm '05, Lott-Villani '07:</span> \((M,g)\) complete Riemannian manifold.</p> 
-    <p>\(\mathrm{Ric}_g \ge 0 \iff \) <b class="key-term">displacement convexity</b>: for every displacement interpolation \(\mu_\lambda = f_\lambda\mathrm{Vol}_g\) with cost \(d_g^2/2,\)
+    <p>\(\mathrm{Ric}_g \ge 0 \iff \) <b class="key-term">displacement convexity</b>: for every displacement interpolation \(\mu_\lambda = f_\lambda\mathrm{Vol}_g\) with cost \(\tfrac12 d_g^2,\)
       \[\mathrm{Ent}[\mu_\lambda|\mathrm{Vol}_g]:=\int \log(f_\lambda) d\mu_\lambda, \quad \text{is convex in } \lambda.\]</p>
     <ul>
       <li class = "fragment">Arbitrary lower Ricci curvature and upper dimension bounds; arbitrary reference measures (weighted Ricci curvature) <span class="citation" style="font-size: .8em">(C-M-S '01, von Renesse-Sturm '05, Lott-Villani '07)</span>.</li>
@@ -701,7 +701,7 @@
     <h3 style="color: rgb(24, 100, 171); font-size: 1em" data-id="ricot">Ricci curvature and optimal transport</h3>
     <p class="fragment">
     <b>Application of optimal transport to prove geometric inequalities:</b> Brunn-Minkowski / Prékopa–Leindler / Borell-Brascamp-Lieb, functional inequalities, volume growth estimates, topological implications, heat semigroup estimates...</p>
-    <p class="fragment" style="margin-top: 1em;">Extensions to other geometries: <span class="citation" style="font-size: .8em;">Finsler (Ohta '09), sub-Riemannian (Barilari-Rizzi '19), Lorentzian (Braun-McCann '23)...</span></p>
+    <p class="fragment" style="margin-top: 1em;">Extensions to other geometries: Finsler <span class="citation" style="font-size: .8em;">(Ohta '09)</span>, sub-Riemannian <span class="citation" style="font-size: .8em;">(Barilari-Rizzi '19)</span>, Lorentzian <span class="citation" style="font-size: .8em;">(Braun-McCann '23)</span>...</p>
   </section>
 
   <section data-auto-animate data-toc-section="background" data-toc-subsection="ricci">
@@ -844,15 +844,15 @@
   <section data-auto-animate data-toc-section="results" data-toc-subsection="displacement">
     <h3 style="color: #1864AB; font-size: 1em; text-align: center;" data-id="wrictitle">Weighted Ricci curvature for Lagrangians</h3>
     <div style="text-align: left; font-size: .82em;">
-      <p class="fragment">Let \(\omega\) be a density on \(M\) and write:
+      <p class="fragment">\(\omega\) - density of the measure \(\mu\),
       \[\pi^*\omega \;=\; e^{-\psi}\sqrt{\det g}\,\bigl|dx^1\wedge\cdots\wedge dx^n\bigr|, \qquad \psi: TM\setminus\mathbf{0} \to \mathbb{R}.\]</p>
-      <p class="fragment">Let \(\Lambda := \tfrac12(\Sigma - [V,\Sigma]) = \Lambda^i\partial_{v^i}\,\,\)   (vanishes iff \(\Sigma\) is a spray), and define
+      <p class="fragment">\(\Lambda := \tfrac12(\Sigma - [V,\Sigma]) = \Lambda^i\partial_{v^i}\quad\)   (vanishes iff \(\Sigma\) is a spray),
       \[
         \Lambda_\parallel := \frac{g_{ij}v^i\Lambda^j}{g_{ij}v^iv^j},
         \qquad
         \Lambda_\perp^2 := \frac{g_{ij}(\Lambda^i-\Lambda_\parallel v^i)(\Lambda^j-\Lambda_\parallel v^j)}{g_{ij}v^iv^j}.
       \]</p>
-      <div class="fragment">For \(N \in (-\infty,\infty]\setminus[1,n]\)&nbsp;, set
+      <div class="fragment">For \(N \in (-\infty,\infty]\setminus[1,n]\)&nbsp;,
       <p data-id="weightedricdef">
       \[
       \boxed{
