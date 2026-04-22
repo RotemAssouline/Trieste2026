@@ -39,7 +39,7 @@ resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
 const G = 1.0;
-const dt = 3;  // faster motion
+const dt = 0.7;  // faster motion
 const numParticles = 5; // 1 central + ... orbiting
 const positions = [];
 const velocities = [];
@@ -48,23 +48,23 @@ const masses = [];
 // === Initial Conditions ===
 function initSystem() {
   masses[0] = 1000; // Central massive body
-  positions[0] = { x: -200, y: -200 };
-  velocities[0] = { x: .04, y: .04 };
+  positions[0] = { x: 0, y: 0 };
+  velocities[0] = { x: 0, y: 0 };
 
 for (let i = 1; i < numParticles; i++) {
   let angle = (i - 1) * (2 * Math.PI / (numParticles - 1));
-  let radius = 100 + i * 20;
+  let radius = 40 + i * 10;
 
   // base position
   let x = radius * Math.cos(angle);
   let y = radius * Math.sin(angle);
 
   // add random offset to position
-  let jitter = 5; // max deviation in units
+  let jitter = 3; // max deviation in units
   x += (Math.random() * 2 - 1) * jitter;
   y += (Math.random() * 2 - 1) * jitter;
 
-  positions[i] = { x: x -200, y: y -200 };
+  positions[i] = { x: x, y: y };
   masses[i] = 1;
 
   // base circular orbit velocity
@@ -107,13 +107,13 @@ function computeAccelerations() {
 function step() {
   const acc = computeAccelerations();
 
-  for (let i = 0; i < numParticles; i++) {
+  for (let i = 1; i < numParticles; i++) {
     positions[i].x += velocities[i].x * dt + 0.5 * acc[i].x * dt * dt;
     positions[i].y += velocities[i].y * dt + 0.5 * acc[i].y * dt * dt;
   }
 
   const newAcc = computeAccelerations();
-  for (let i = 0; i < numParticles; i++) {
+  for (let i = 1; i < numParticles; i++) {
     velocities[i].x += 0.5 * (acc[i].x + newAcc[i].x) * dt;
     velocities[i].y += 0.5 * (acc[i].y + newAcc[i].y) * dt;
   }
@@ -130,7 +130,7 @@ function draw() {
     const radius = i === 0 ? 8 : Math.sqrt(masses[i]) * 5; // slightly bigger center
     ctx.beginPath();
     ctx.arc(pos.x, pos.y, radius, 0, 2 * Math.PI);
-    ctx.fillStyle = '#6f97a1';
+    ctx.fillStyle = '#1864AB';
     ctx.fill();
   }
   ctx.restore();
