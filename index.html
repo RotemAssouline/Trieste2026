@@ -222,7 +222,7 @@
   <h3 style="color: #1864AB;" data-id="bmeq">The Brunn-Minkowski inequality</h3>
   <div style="text-align: left; font-size: .75em;">
     <p data-id="CMS"><b class="accent-warm">Theorem</b> <span class="citation">(Cordero-Erausquin, McCann &amp; Schmuckenschläger '01, Sturm '06)</span>:
-      \((M,g)\)&nbsp; complete \(n\)-dimensional Riemannian manifold, 
+      \((M,g)\)&nbsp; complete \(n\)-dim Riemannian manifold, 
       \[\mathrm{Ric}_g \ge 0\quad \implies \quad \forall A_0,A_1\,\, \text{Borel,} \,\,\mathrm{Vol}_g(A_0)\mathrm{Vol}_g(A_1) >0\]
       \[\mathrm{Vol}_g(A_\lambda)^{1/n} \ge (1-\lambda)\cdot\mathrm{Vol}_g(A_0)^{1/n} + \lambda\cdot\mathrm{Vol}_g(A_1)^{1/n}.\]
     </p>
@@ -243,7 +243,7 @@
   <h3 style="color: #1864AB;" data-id="bmeq">The Brunn-Minkowski inequality</h3>
   <div style="text-align: left; font-size: .75em;">
     <p data-id="CMS"><b class="accent-warm">Theorem</b> <span class="citation">(Cordero-Erausquin, McCann &amp; Schmuckenschläger '01, Sturm '06)</span>: &nbsp; 
-      \((M,g)\)&nbsp; complete \(n\)-dimensional Riemannian manifold, 
+      \((M,g,\mu)\)&nbsp; complete \(n\)-dim weighted Riemannian manifold, 
      \(N \in [n,\infty]\).
       \[\mathrm{Ric}_{\mu,N} \ge 0\quad \implies  \quad \forall A_0,A_1\,\, \text{Borel,} \,\,\mathrm{Vol}_g(A_0)\mathrm{Vol}_g(A_1) >0\]
       \[ 
@@ -350,7 +350,7 @@
     <p>
       Let \(S^{2d+1} = \{z \in \mathbb{C}^{d+1}\, \mid \, |z|=1\}\) &nbsp;&nbsp; and let \(s \in (-1,1).\) &nbsp; A <b>contact magnetic geodesic of strength \(s\)</b> is a solution to the ODE
       \[\nabla_{\dot\gamma}\dot\gamma = 2si\left(\dot\gamma - \eta(\dot\gamma)\cdot i\gamma\right), \qquad |\dot\gamma| \equiv 1,\]
-      where \(\nabla\) is the Levi-Civita connection of the round metric and \(\eta\) is the <b>contact one-form</b>
+      where \(\eta\) is the <b>contact one-form</b>
       \[\eta(v) = \mathrm{Re}\left\langle iz,v\right\rangle, \qquad v \in T_zS^{2d+1}, \,\, z \in S^{2d+1}.\]
       </p>
       <ul>
@@ -469,7 +469,7 @@
 <section data-auto-animate>
     <h3 style="color: #1864AB;" data-id="lagtitle">Tonelli Lagrangians</h3>
     <div style="text-align: left; font-size: .9em;">
-      <p>The <b class="key-term"> Hamiltonian </b> is the <i>Fenchel conjugate</i> of the Lagrangian:
+      <p>The <b class="key-term"> Hamiltonian </b> is:
       \[H(p) : = \sup_{v \in T_xM}p(v) - L(v), \quad p\in T^*_xM,\,\,x \in M.\]</p>
       <p class = "fragment">The supremum is achieved at \(\mathcal{L}p,\) where \(\mathcal{L} : T^*M \to TM\) &nbsp; is the <b class="key-term"> Legendre transform </b> associated to \(L.\)</p>
 
@@ -548,15 +548,19 @@
 
   <section data-auto-animate>
     <h3 style="color: #1864AB; font-size: 1em; text-align: center;" data-id="wrictitle">Ricci curvature for Lagrangians</h3>
+  </section>
+
+  <section data-auto-animate>
+    <h3 style="color: #1864AB; font-size: 1em; text-align: center;" data-id="wrictitle">Ricci curvature for Lagrangians</h3>
     <div style="text-align: left; font-size: .72em; line-height: 1.45;">
-      <ul style="list-style: none; padding-left: 0;" class="fragment">
-        <li style="margin-bottom: .5em;"><b>Grifone</b>, J. <!-- <i>Structure presque-tangente et connexions.</i> --> Ann. Inst. Fourier, 1972.</li>
-        <li style="margin-bottom: .5em;"><b>Foulon</b>, P. <!-- <i>G&eacute;om&eacute;trie des &eacute;quations diff&eacute;rentielles du second ordre.</i> --> Ann. Inst. H. Poincar&eacute; Phys. Th&eacute;or., 1986.</li>
-        <li style="margin-bottom: .5em;"><b>Agrachev</b>, A. A.; <b>Gamkrelidze</b>, R. V. <!-- <i>Feedback-invariant optimal control theory and differential geometry&mdash;I. Regular extremals.</i> --> J. Dyn. Control Syst., 1997.</li>
-        <li style="margin-bottom: .5em;"><b>Agrachev</b>, A.; <b>Zelenko</b>, I. <!-- <i>Geometry of Jacobi Curves. II.</i> --> J. Dyn. Control Syst., 2002.</li>
-        <li style="margin-bottom: .5em;"><b>Lee</b>, P. W. Y. <!-- <i>Displacement interpolations from a Hamiltonian point of view.</i> --> J. Funct. Anal., 2013.</li>
-        <li style="margin-bottom: .5em;"><b>Ohta</b>, S.-i. <!-- <i>On the curvature and heat flow on Hamiltonian systems.</i> --> Anal. Geom. Metr. Spaces, 2014.</li>
-        <li style="margin-bottom: .5em;"><b>Agrachev</b>, A.; <b>Barilari</b>, D.; <b>Rizzi</b>, L. <!-- <i>Curvature: a variational approach.</i> --> Mem. Amer. Math. Soc., 2018.</li>
+      <ul style="list-style: none; padding-left: 0;">
+        <li style="margin-bottom: .5em;"><b>Grifone</b>, J. <!-- <i>Structure presque-tangente et connexions.</i> --> <span style="color: gray;">Ann. Inst. Fourier, 1972.</span></li>
+        <li style="margin-bottom: .5em;"><b>Foulon</b>, P. <!-- <i>G&eacute;om&eacute;trie des &eacute;quations diff&eacute;rentielles du second ordre.</i> --> <span style="color: gray;">Ann. Inst. H. Poincar&eacute; Phys. Th&eacute;or., 1986.</span></li>
+        <li style="margin-bottom: .5em;"><b>Agrachev</b>, A. A.; <b>Gamkrelidze</b>, R. V. <!-- <i>Feedback-invariant optimal control theory and differential geometry&mdash;I. Regular extremals.</i> --> <span style="color: gray;">J. Dyn. Control Syst., 1997.</span></li>
+        <li style="margin-bottom: .5em;"><b>Agrachev</b>, A.; <b>Zelenko</b>, I. <!-- <i>Geometry of Jacobi Curves. II.</i> --> <span style="color: gray;">J. Dyn. Control Syst., 2002.</span></li>
+        <li style="margin-bottom: .5em;"><b>Lee</b>, P. W. Y. <!-- <i>Displacement interpolations from a Hamiltonian point of view.</i> --> <span style="color: gray;">J. Funct. Anal., 2013.</span></li>
+        <li style="margin-bottom: .5em;"><b>Ohta</b>, S.-i. <!-- <i>On the curvature and heat flow on Hamiltonian systems.</i> --> <span style="color: gray;">Anal. Geom. Metr. Spaces, 2014.</span></li>
+        <li style="margin-bottom: .5em;"><b>Agrachev</b>, A.; <b>Barilari</b>, D.; <b>Rizzi</b>, L. <!-- <i>Curvature: a variational approach.</i> --> <span style="color: gray;">Mem. Amer. Math. Soc., 2018.</span></li>
       </ul>
     </div>
   </section>
@@ -567,13 +571,15 @@
       <p>\(\Sigma:=\) <b class="key-term">Euler-Lagrange vector field</b> on \(TM\):
       \[\Sigma = v^i\partial_{x^i} + \Sigma^i\partial_{v^i}, \qquad \Sigma^i = L^{v^iv^j}\!\left(L_{x^j} - v^k L_{v^jx^k}\right).\]</p>
       <!-- <p class="fragment">\(\Sigma\) is a <b class="key-term">semispray</b>: \(\mathrm{J}\Sigma = V,\) where \(V = v^i\partial_{v^i}\) and \(\mathrm{J}\) is the almost-tangent structure \(\partial_{x^i}\mapsto\partial_{v^i},\,\partial_{v^i}\mapsto 0.\) -->
+      <p class="fragment">
       The associated <b class="key-term">nonlinear connection</b> is a splitting 
       \[TTM = \mathcal{V}TM \oplus \mathcal{H}TM.\]
+      </p>
       <div class="fragment">
       \[
-        \partial_{v_i} \quad E_i = \partial_{x^i} - \Gamma_i^j\partial_{v^j} \qquad 
+        \left(\partial_{v_i},\,\, E_i = \partial_{x^i} - \Gamma_i^j\partial_{v^j}\right) \qquad 
         \qquad
-        \varepsilon^i = dv^i + \Gamma_j^i\,dx^j \quad dx^i
+        \left(\varepsilon^i = dv^i + \Gamma_j^i\,dx^j,dx^i\right)
       \]
       \[
         \Gamma_i^j := -\tfrac12\,\partial_{v^i}\Sigma^j.
